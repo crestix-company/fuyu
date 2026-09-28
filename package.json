@@ -1,0 +1,12 @@
+{
+  "name": "farmers-table-fuyunohi",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/verify.mjs",
+    "test": "node scripts/test-motion.mjs && node --check dist/assets/site.js"
+  }
+}
