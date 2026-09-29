@@ -5,8 +5,8 @@
   "type": "module",
   "engines": { "node": ">=22" },
   "scripts": {
-    "dev": "node scripts/serve.mjs",
-    "build": "node scripts/verify.mjs",
-    "test": "node scripts/test-motion.mjs && node --check dist/assets/site.js"
+    "dev": "node scripts/build.mjs && node scripts/serve.mjs",
+    "build": "node scripts/build.mjs && node scripts/verify.mjs",
+    "test": "node scripts/test-motion.mjs && node scripts/test-routes.mjs && node scripts/test-calendar.mjs && node --check dist/assets/site.js"
   }
 }

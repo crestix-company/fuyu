@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f2">
+  <meta name="description" content="{{description}}">
+  <title>{{title}}</title>
+  <link rel="canonical" href="{{canonical}}">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{canonical}}">
+  <meta property="og:image" content="https://crestix-company.github.io/fuyu/assets/spring-lunch-1600.webp">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%232d4037'/%3E%3Ctext x='32' y='47' text-anchor='middle' font-family='serif' font-size='44' fill='%23fff'%3E冬%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/design.css?v=20260928d">
+  <link rel="stylesheet" href="assets/pages.css?v=20260929b">
+  <script src="assets/site.js?v=20260928d" defer></script>
+</head>
+<body class="page-{{slug}}">
+<a class="skip-link" href="#main">本文へ移動</a>
+  <header class="header" id="site-top">
+    <a class="brand" href="{{root}}" aria-label="Farmer’s table 冬の日 トップ"><img src="assets/logo.webp" width="800" height="465" alt="Farmer’s table 冬の日"></a>
+    <button class="menu-toggle" aria-controls="navigation" aria-expanded="false"><span></span><span></span><span class="sr-only">メニューを開く</span></button>
+    <nav id="navigation" aria-label="主なメニュー">{{navigation}}</nav>
+    <a class="header-reserve" href="tel:0255226568" aria-label="お電話でご予約：025-522-6568"><span>お電話でご予約</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3H3v4c0 8 6 14 14 14h4v-4l-5-2-2 3c-4-1-7-4-8-8l3-2-2-5Z"/></svg></a>
+  </header>
+<main id="main" tabindex="-1">
+{{breadcrumb}}
+{{content}}
+</main>
+  <footer class="footer"><div class="footer-top wrap"><div><span class="shop-english">Farmer’s table</span><a class="footer-name" href="{{root}}">冬の日</a><p>種まきからの食卓</p></div><nav class="footer-links" aria-label="フッターメニュー">{{footerNavigation}}</nav><a class="back-top" href="#top" aria-label="ページの先頭へ戻る">↑</a></div><div class="footer-bottom wrap"><small>© Farmer’s table 冬の日</small><span>新潟県上越市下新町1057-2</span></div></footer>
+</body>
+</html>

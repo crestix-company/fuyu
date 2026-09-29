@@ -1,0 +1,127 @@
+/* Shared page structure, preserving the original paper-and-garden palette. */
+#navigation a[aria-current="page"]::after{transform:scaleX(1)}
+.footer-links a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px}
+.breadcrumb{display:flex;gap:14px;align-items:center;flex-wrap:wrap;padding-block:25px;font-size:12px;color:var(--muted)}
+.breadcrumb a{padding-block:5px;text-decoration:underline;text-underline-offset:4px}
+.page-mast{display:grid;grid-template-columns:1fr 1.15fr;gap:7%;align-items:center;padding:28px 0 90px}
+.page-mast h1{font-size:clamp(34px,3.7vw,52px);line-height:1.85;letter-spacing:.08em}
+.page-mast .section-no{margin-bottom:25px}
+.page-mast .page-lead{font-size:15px;line-height:2.15;margin-top:27px;color:var(--muted)}
+.page-mast figure{overflow:hidden}
+.page-mast figure img{width:100%;height:440px;object-fit:cover;animation:hero-arrive 1.8s cubic-bezier(.2,.7,.2,1) both}
+.page-about .page-mast figure img{object-position:50% 48%}
+.page-about .intro{border-top:1px solid var(--line);padding-top:80px}
+.page-about .intro-body{padding-top:56px}
+.next-page{padding-block:70px;display:flex;justify-content:space-between;align-items:center;gap:60px;border-top:1px solid var(--line)}
+.next-page .section-no{margin-bottom:16px}
+.next-page h2{font-size:30px;line-height:1.8}
+.next-page p:not(.section-no){margin-top:18px;font-size:15px;color:var(--muted)}
+.next-page .text-link{flex-shrink:0}
+.home-about{display:grid;grid-template-columns:1fr 1fr;gap:10%;align-items:center}
+.home-about p:not(.section-no){margin-top:25px;line-height:2.1}
+.home-about .text-link{margin-top:30px}
+.home-calendar{display:flex;align-items:center;justify-content:space-between;gap:32px;padding-block:30px;border-block:1px solid var(--line);margin-top:18px}
+.home-calendar .section-no{font-size:12px;margin-bottom:6px}
+.home-calendar-title{font-family:var(--serif);font-size:21px;margin-top:0;letter-spacing:.08em}
+.home-calendar-note{font-size:13px;color:var(--muted);line-height:1.9;margin:0}
+.calendar-entry{display:inline-flex;align-items:center;justify-content:space-between;gap:36px;padding:17px 24px;min-height:52px;color:var(--paper);background:var(--green);font-size:14px;white-space:nowrap;transition:background .2s}
+.calendar-entry:hover{background:#3e5548}.calendar-entry span{font-size:18px}
+.home-about figure img{width:100%;height:440px;object-fit:cover;object-position:50% 40%}
+.home-paths{background:#eeeee6}
+.path-grid{display:grid;grid-template-columns:1fr 1fr;gap:7%}
+.path-card{display:block}
+.path-card figure{overflow:hidden;background:#d3d4c8}
+.path-card figure img{width:100%;height:360px;object-fit:cover;transition:transform 1s ease}
+.path-card:nth-child(2) figure img{object-position:50% 40%}
+.path-card-heading{display:flex;align-items:center;gap:18px;border-bottom:1px solid var(--line);padding:24px 0 18px}
+.path-card h3{font-size:25px}
+.path-number{font-size:13px;color:var(--accent)}
+.path-card-heading>span:last-child{margin-left:auto;font-size:24px;transition:transform .3s}
+.path-card>p{font-size:15px;color:var(--muted);margin-top:20px;line-height:2}
+.home-visit-main{display:flex;justify-content:space-between;gap:65px;align-items:center}
+.home-visit-main p{margin-top:25px;font-size:15px;line-height:2.1}
+.home-visit-links{min-width:340px}
+.home-visit-links .text-link{width:100%}
+.home-phone{display:block;font-family:var(--serif);font-size:30px;letter-spacing:.05em;margin-top:35px}
+.home-phone small{display:block;font-family:var(--sans);color:var(--accent);font-size:13px}
+.menu-content{padding-block:60px 100px}
+.menu-content article h2,.farm-intro h2{font-size:clamp(25px,2.4vw,34px);line-height:1.9;letter-spacing:.08em}
+.menu-content .night-cafe h2{font-size:27px}
+.menu-content .takeout h2 span{display:inline-block;white-space:nowrap}
+.menu-content .night-cafe{padding-block:40px;border-bottom:1px solid var(--line)}
+.menu-content .takeout{border-top:0;padding-top:0}
+.page-menu .next-page{border-top:0}
+.farm-page-hero{height:540px}
+.farm-page-hero h1{font-size:clamp(38px,4.6vw,66px);line-height:1.75;letter-spacing:.1em;text-shadow:0 1px 9px #13241633}
+.farm-hero-lead{font-size:15px;margin-top:25px;letter-spacing:.13em}
+.page-farm .next-page{border-top:0}
+.visit-nav{display:flex;border-block:1px solid var(--line)}
+.visit-nav a{flex:1;display:flex;justify-content:space-between;gap:15px;padding:20px 24px;font-size:14px}
+.visit-nav a+a{border-left:1px solid var(--line)}
+.visit-nav a:hover{background:#e9ece3}
+.visit-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;padding-block:18px 36px}
+.visit-heading .section-no{margin-bottom:14px}
+.visit-heading h1{font-size:32px;line-height:1.85;letter-spacing:.05em}
+.visit-heading h1 span{display:inline-block;white-space:nowrap}
+.visit-heading>p{font-size:14px;color:var(--muted);line-height:2;margin:0 0 4px}
+.visit-planning{display:grid;grid-template-columns:280px minmax(0,1fr);gap:48px;padding-block:44px 80px;align-items:start}
+.hours-summary h2,.calendar-heading h2{font-size:25px;line-height:1.8;letter-spacing:.08em}
+.hours-days{font-size:14px;margin-top:14px;color:var(--muted);line-height:2}
+.hours-summary .hours{padding-top:10px}.hours-summary .hours dl>div{grid-template-columns:58px 1fr;gap:12px;padding:18px 0}
+.hours-summary .hours dt{font-size:15px}.hours-summary .hours dd{font-size:19px;letter-spacing:.02em}.hours-summary .hours small{font-size:12px}
+.hours-summary .hours>.note{margin-top:20px;font-size:13px}.hours-summary>.text-link{margin-top:12px}
+.entrance-detail{margin-top:24px;max-width:320px}.entrance-detail img{width:100%;height:auto}.entrance-detail figcaption{font-size:12px;color:var(--muted);margin-top:8px}
+.page-visit .access-section{padding-block:90px}
+.page-visit .reservation{padding-block:90px}
+.calendar-section{min-width:0}
+.calendar-heading{margin-bottom:24px}
+.calendar-heading>p{font-size:14px;color:var(--muted);line-height:2;margin-top:14px}
+.calendar-panel{padding:0 12px 12px;border:1px solid var(--line);background:#fff}
+.calendar-panel-heading{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 4px;color:var(--green)}
+.calendar-panel-heading>span:first-child{font-family:var(--serif);font-size:18px;letter-spacing:.12em}
+.calendar-panel-heading>span:last-child{font-size:11px;color:var(--muted);letter-spacing:.08em}
+.calendar-panel iframe{display:block;width:100%;height:620px;border:0;background:var(--paper)}
+.calendar-panel .calendar-agenda{display:none}
+.calendar-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 20px;padding-top:16px}
+.calendar-footer .note{font-size:12px}.calendar-footer .text-link{font-size:13px;flex-shrink:0;gap:18px}
+.calendar-mobile-br{display:none}
+@media(hover:hover) and (pointer:fine){.path-card:hover img{transform:scale(1.035)}.path-card:hover .path-card-heading>span:last-child{transform:translate(3px,-3px)}}
+@media(max-width:1100px){
+ .page-mast{gap:5%;padding-bottom:65px}.page-mast h1{font-size:36px}.page-mast figure img{height:390px}
+ .home-about{gap:6%}.home-about figure img{height:420px}.path-card figure img{height:290px}.path-card h3{font-size:22px}
+ .home-visit-main{gap:35px}.home-visit-links{min-width:300px}.home-phone{font-size:26px}
+ .home-calendar{gap:24px}.home-calendar-note{display:none}.visit-heading{display:block}.visit-heading>p{margin-top:15px}.visit-heading>p br{display:none}
+ .visit-planning{grid-template-columns:240px minmax(0,1fr);gap:30px}.hours-summary .hours dd{font-size:18px}
+}
+@media(max-width:1000px){
+ .visit-planning{grid-template-columns:1fr;gap:36px}.hours-summary .hours dl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}.hours-summary .hours dl>div{display:block;padding-block:12px}.hours-summary .hours dd{font-size:18px;margin-top:8px}.hours-days br{display:none}.hours-summary .hours>.note{margin-top:15px}
+}
+@media(max-width:900px) and (min-width:761px){
+ #navigation{gap:12px}#navigation a{font-size:11px}.brand,.brand img{width:110px}.header{gap:12px}
+ .page-mast h1{font-size:31px}.page-mast .page-lead{font-size:14px}.page-mast .page-lead br{display:none}
+ .home-about h2,.home-visit h2{font-size:28px}.home-about p:not(.section-no){font-size:15px}.home-about br{display:none}
+ .path-card-heading{gap:12px}.path-card h3{font-size:20px}
+}
+@media(max-width:760px){
+ .breadcrumb{gap:10px;padding-block:15px;font-size:11px}
+ .page-mast{grid-template-columns:1fr;gap:30px;padding:25px 0 48px}.page-mast h1{font-size:32px;line-height:1.85}
+ .page-mast .section-no{font-size:12px;margin-bottom:18px}.page-mast .page-lead{font-size:15px;margin-top:22px}.page-mast .page-lead br{display:none}
+ .page-mast figure img{height:280px}.page-about .intro{padding-block:60px}.page-about .intro-body{padding-top:0}
+ .page-about .place-gallery{padding-bottom:60px}.next-page{display:block;padding-block:55px}.next-page h2{font-size:26px}.next-page .text-link{margin-top:24px;min-width:200px}
+ .home-about{grid-template-columns:1fr;gap:36px}.home-about figure img{height:340px}.home-about .text-link{margin-top:22px}
+ .path-grid{grid-template-columns:1fr;gap:48px}.path-card figure img{height:300px}.path-card h3{font-size:24px}.path-card-heading{padding-top:20px;gap:14px}.path-card>p{font-size:15px;margin-top:15px}
+ .home-visit-main{display:block}.home-visit-links{min-width:0;margin-top:30px}.home-phone{font-size:28px;margin-top:25px}
+ .menu-content{padding-block:35px 70px}.menu-content .night-cafe{padding-block:35px}.farm-page-hero{height:430px}.farm-page-hero h1{font-size:37px}.farm-hero-lead{font-size:13px}
+ .menu-content article h2{font-size:26px}.menu-content .takeout h2{font-size:25px}.farm-intro h2{font-size:29px}
+ .menu-content .night-cafe h2{grid-column:2;grid-row:1;margin-top:51px;font-size:23px;line-height:1.8}.menu-content .night-cafe h2 span{display:block;white-space:nowrap}
+ .home-calendar{display:grid;grid-template-columns:1fr;gap:18px;padding-block:24px;margin-top:8px}.home-calendar-title{font-size:20px}.calendar-entry{width:100%;font-size:14px;padding:14px 20px}
+ .visit-heading{padding-block:12px 26px}.visit-heading .section-no{font-size:12px;margin-bottom:12px}.visit-heading h1{font-size:27px;max-width:12em}.visit-heading>p{font-size:14px;line-height:1.9;margin-top:16px}
+ .visit-nav{display:grid;grid-template-columns:1fr 1fr}.visit-nav a{font-size:13px;padding:14px 12px;gap:8px}.visit-nav a:nth-child(3){border-left:0}.visit-nav a:nth-child(n+3){border-top:1px solid var(--line)}.page-visit .access-section,.page-visit .reservation{padding-block:70px}
+ .visit-planning{padding-block:30px 60px;gap:36px}.hours-summary h2,.calendar-heading h2{font-size:24px}.hours-summary .hours dl{grid-template-columns:1fr 1fr;gap:0 18px}.hours-summary .hours dl>div{padding-block:12px}.hours-summary .hours dd{font-size:18px}.hours-summary .hours small{font-size:11px}.hours-summary>.text-link{margin-top:6px;font-size:13px}.hours-summary .hours>.note{font-size:12px}.hours-days{margin-top:12px;font-size:13px}
+ .calendar-heading{margin-bottom:20px}.calendar-heading>p{margin-top:12px;font-size:13px}.calendar-heading>p br{display:none}
+ .calendar-panel{padding:0 8px 8px}.calendar-panel-heading{padding:18px 6px;gap:12px}.calendar-panel-heading>span:first-child{font-size:16px}.calendar-panel-heading>span:last-child{font-size:10px}
+ .calendar-panel .calendar-month{display:none}.calendar-panel .calendar-agenda{display:block;height:480px}
+ .calendar-footer{display:block;padding-top:18px}.calendar-footer .note{font-size:12px}.calendar-footer .text-link{margin-top:10px;font-size:13px}.calendar-mobile-br{display:block}.entrance-detail{max-width:none}
+}
+@media(max-width:370px){.page-mast h1{font-size:29px}.page-mast figure img{height:250px}.path-card figure img{height:250px}.path-card h3{font-size:22px}.home-about h2{font-size:25px}.home-about br{display:none}.farm-page-hero h1{font-size:33px}.home-phone{font-size:26px}.visit-nav a{padding-inline:8px;font-size:12px}}
+@media(prefers-reduced-motion:reduce){.page-mast figure img{animation:none}}

@@ -1,4 +1,10 @@
 document.documentElement.classList.add('js');
+// Keep previously shared single-page section links useful after the split.
+if(document.body.classList.contains('page-home')){
+ const legacyRoutes={'#about':'about/','#food':'menu/','#meal':'menu/#meal','#cafe':'menu/#cafe','#takeout':'menu/#takeout','#night-cafe':'menu/#night-cafe','#farm':'farm/','#hours':'visit/#hours','#access':'visit/#access','#reservation':'visit/#reservation'};
+ const destination=legacyRoutes[window.location.hash];
+ if(destination)window.location.replace(new URL(destination,window.location.href));
+}
 const toggle=document.querySelector('.menu-toggle');
 const nav=document.querySelector('#navigation');
 const outsideMenu=[document.querySelector('main'),document.querySelector('footer')];
