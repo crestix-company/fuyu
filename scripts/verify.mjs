@@ -20,6 +20,9 @@ for(const route of routes){
  assert(!/calendar-days|month-prev|calendar-card/.test(html),'No fabricated local calendar events');
  assert(!/TODO|CONTENT -->|準備中|サンプルテキスト|\{\{/.test(html),'No unfinished content on '+route);
  assert(!html.includes('hero-control')&&!html.includes('motion-toggle'),'Hero controls remain removed');
+ const header=html.match(/<header\b[\s\S]+?<\/header>/)?.[0];
+ assert(header&&!header.includes('<img'),'Image logo is removed from every header: '+route);
+ assert(header.includes('class="brand-name">冬の日</span>'),'Plain text home link retains the store name: '+route);
  for(const img of html.matchAll(/<img\b[^>]+>/g)){
   assert(/\balt="[^"]+"/.test(img[0]),'Image alt on '+route);
   assert(/\bwidth=/.test(img[0])&&/\bheight=/.test(img[0]),'Image dimensions on '+route);
@@ -51,6 +54,11 @@ for(const [route,{html}] of pages){
  }
 }
 const menu=pages.get('menu/').html, farm=pages.get('farm/').html, visit=pages.get('visit/').html;
+assert(menu.includes('<figcaption>カレー（夏季限定）</figcaption>'),'Curry photo is labelled summer-only');
+assert(menu.includes('alt="野菜を添えた冬の日のカレー（夏季限定）"'),'Curry alt text includes its season');
+assert(menu.includes('夏には、季節限定のカレーも。'),'Meal introduction identifies seasonal curry');
+assert(menu.includes('夏季限定のカレー'),'Menu metadata identifies seasonal curry');
+assert(!menu.includes('おかず、カレー、'),'Curry is not presented as a year-round meal');
 for(const fact of ['4つ以上','1つから','30分以内','肉や卵','第2・第4金曜'])assert(menu.includes(fact),'Menu fact: '+fact);
 for(const fact of ['2025年','年間契約','7〜8','1〜5月','週に1回'])assert(farm.includes(fact),'Farm fact: '+fact);
 for(const fact of ['0255226568','下新町1057-2','前日まで','2名様以上','縦列駐車','上越IC','12:00〜14:00','14:00〜16:00','17:30〜','18:30〜20:00'])assert(visit.includes(fact),'Visit fact: '+fact);

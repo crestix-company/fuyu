@@ -6,7 +6,7 @@ const template=await readFile(path.join(root,'src/layout.html'),'utf8');
 const pages=[
  {slug:'home',label:'トップ',title:'Farmer’s table 冬の日｜種まきからの食卓',description:'新潟県上越市の Farmer’s table 冬の日。種まきからの食卓を大切に、季節の料理と喫茶、農作業体験型の野菜販売をご案内します。ご予約はお電話で。'},
  {slug:'about',label:'冬の日について',title:'冬の日について｜Farmer’s table 冬の日',description:'土に触れ、野菜を育て、料理をする。新潟県上越市の Farmer’s table 冬の日が大切にする、畑と台所がつながる時間。店内や庭の様子をご紹介します。'},
- {slug:'menu',label:'料理とメニュー',title:'料理とメニュー｜Farmer’s table 冬の日',description:'冬の日の昼食と夕食、喫茶と夜喫茶、お弁当・オードブルのご案内。野菜を中心にしたおかずやカレー、ケーキを囲んで季節の食卓をお楽しみください。'},
+ {slug:'menu',label:'料理とメニュー',title:'料理とメニュー｜Farmer’s table 冬の日',description:'冬の日の昼食と夕食、喫茶と夜喫茶、お弁当・オードブルのご案内。野菜を中心にしたおかずや夏季限定のカレー、ケーキを囲んで季節の食卓をお楽しみください。'},
  {slug:'farm',label:'畑と野菜販売',title:'畑と野菜販売｜Farmer’s table 冬の日',description:'週に1回程度、農作業をお手伝いいただく体験型の野菜販売。6〜11月を中心に、畑の恵みをお届けします。年間契約や農作業についてお気軽にご相談ください。'},
  {slug:'visit',label:'店舗情報・ご予約',title:'店舗情報・ご予約｜Farmer’s table 冬の日',description:'新潟県上越市下新町1057-2、上越ICより車で約10分。冬の日の営業時間、地図、駐車場のご案内。ご予約・お問い合わせは025-522-6568へ。'},
 ];
